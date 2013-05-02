@@ -1,0 +1,60 @@
+<p style="text-align: center"> Stick a location in the box to find your nearest pubs </p>
+<div class="row">
+  <div class="span12 mainbanner">
+    <%= image_tag 'tap_heads.jpg' %>
+    <div class="span3 beer_def">
+    <p>beer  (bîr)
+      n.
+      1.
+      a. A fermented alcoholic beverage brewed from malt and flavored with hops.
+      2. A serving of one of these beverages.
+    </p>
+  </div>
+    <div class='span3 pub_def'>
+      <p>A pub (pron.: /pʌb/), formally public house (a house "open to the public", as opposed to a private house), is a drinking establishment fundamental to the culture of Britain, Ireland, Australia, Canada and New Zealand</p>
+    </div>
+    
+      <div class="beer_form span4 offset3">
+        <form method="get" action="/search">
+        <input type="search" name="address" placeholder="Where are you?...">
+        <input type="submit" name=" Find My Pubs " class="btn btn-info">
+      </form>
+  </div>
+
+  </div>
+  
+  
+</div><!--mainpic-->
+
+
+<div class="row">
+    <div class="span6 offset1">
+      <h1 id="clicksign"> Click me to Register </h1>
+        <div id="signup" class="start_hidden">
+          <%= form_for @user, :url => signup_url do |f| %>
+            <p class="field"><%= f.text_field :name_first, :placeholder => 'First name' %></p>
+            <p><%= f.text_field :name_last, :placeholder => 'Last name' %></p>
+            <p><%= f.text_field :email, :placeholder => 'Email address' %></p>
+            <p><%= f.password_field :password, :placeholder => 'Password' %></p>
+            <p><%= f.password_field :password_confirmation, :placeholder => 'Confirm password' %></p>
+            <p><%= f.submit "Hit me", :class => 'btn btn-primary' %></p>
+          <% end %>
+        </div>
+    </div>
+  <div class="span4">
+    <br><!--just until you sort the padding and layout, purely for bootstrap ref -->
+    <h4> Pub of the week: The Dovetail </h4>
+    <article>
+      <p>A tucked away little gem, serving an plethora of Belgian beers with a smile. Whether you are looking for a Flemish sour ale, a Trappist dubbel or having taken leave of your taste buds and order a beer brewed with banana, this is the place for you. Beer sponge *sorry* food isn't bad either. </p>
+      <p id="easteregg" class="clickable"> Address: 9-10 Jerusalem Passage  City of London, London, Greater London EC1V 4JP </p>
+        <div id="reveal" class="hider">
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=370x200&sensor=false&zoom=16&markers=51.52317,-0.10401" %>
+        </div>
+    </article>
+  </div>
+</div>
+
+
+
+
+

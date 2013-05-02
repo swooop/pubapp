@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="span4">
+    <h1><%= @pub.name %></h1>
+    <h3><%= @pub.location.address %></h3>
+  </div>
+  <div class="span6">
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@pub.location.latitude}%2C#{@pub.location.longitude}" %>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+   
+
+
+  

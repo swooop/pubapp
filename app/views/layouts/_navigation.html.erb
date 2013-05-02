@@ -1,0 +1,26 @@
+<div class="row">
+  
+    <%= link_to "Home", root_path, :class => 'brand' %>
+  
+  
+    
+  
+  
+    <%= link_to "Watering Holes", pubs_path, :class => 'brand' %>
+  
+
+
+
+    <div class="login offset6">
+        <% if current_user %>
+            <p class="sponsored">You&rsquo;re logged in as <%= current_user.name_first %> <%= current_user.name_last %> <%= link_to 'Log out', logout_path %></p>
+        <% else %>
+          <form class="smooth" method="post" action="/login">
+            <input type="text" name="email" placeholder="Email" class="field">
+            <input type="password" name="password" placeholder="Password" class="field">
+            <input type="submit" name="Login" value="Login" class="btn btn-primary">
+          </form>
+        <% end %>
+
+  </div>
+</div>

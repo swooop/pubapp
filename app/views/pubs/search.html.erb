@@ -1,0 +1,16 @@
+<h1>Your Nearest Pubs</h1>
+
+<div class="row">
+  <div class="span2">
+    <% @locations.each do |location| %>
+
+      <% location.pubs.each do |pub| %>
+       <h4 class="pub_title"> <%= pub.name %> </h4>
+       <p class="pub_address"> <%= pub.location.address %> </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div id="map-canvas" class="span8 offset1 map" data-address="<%= params[:address] %>"></div>
+</div>
+
+

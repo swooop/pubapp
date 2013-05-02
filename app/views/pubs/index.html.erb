@@ -1,0 +1,38 @@
+
+
+<h1>Here lies a mighty list-o-pubs.</h1>
+<h1>Click the letter view the corresponding watering holes</h1>
+<!--<p>Find me in app/views/pubs/index.html.erb</p> -->
+
+<% ('A'..'Z').to_a.each do |c| %>
+  <h2 class="indexer" data-indice="<%= c %>"> <%= c %> </h2>
+<% end %>
+
+<!-- The Alphabets -->
+<% ('A'..'Z').to_a.each do |c| %>
+  <div id="cat_<%= c %>" class="index-category"<% if c != 'A' %> style="display:none"<% end %>>
+    <div class="row"><div class="span12"><h1> <%= c %> </h1></div></div>
+    <div class="row">
+      <div class="span3">
+        <ul>
+          <% inpub = @pubs.select { |f| (c.downcase) === f.name.first.downcase} %>
+          <% num_per_col = (inpub.length / 4) + 1 %>
+          <% inpub.each_with_index do |pub, index| %>
+            <% if index % num_per_col == 0 && index != 0 %>
+                </ul>
+              </div>
+              <div class="span3">
+                <ul>
+            <% end %>
+              <li> <%= link_to pub.name, pub_path(pub) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script>
+
+
+</script>

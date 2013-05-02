@@ -1,0 +1,6 @@
+<h1><%= @location.address %></h1>
+
+<% @location.pubs.each do |pub| %>
+  <%= pub.name %><br />
+  <%= pub.location.address %>
+<% end %>

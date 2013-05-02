@@ -1,0 +1,30 @@
+// Place all the styles related to the Pubs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.biglist {
+  width: 5000px;
+
+  
+}
+
+
+.indexer {
+  display: inline-block;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.disabled {
+  color: #cccccc;
+}
+
+h4.pub_title {
+  text-decoration: underline;
+}
+
+.pub_address p{
+  padding :none ;
+}
+
